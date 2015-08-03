@@ -1,0 +1,15 @@
+def MeanMode(arr)
+
+  mean = arr.inject {|sum,n| sum + n}./(arr.length)
+  mode = arr.max_by {|x| arr.count(x)}
+  if (mean == mode)
+    return 1
+  else 
+    return 0
+  end
+         
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+MeanMode(STDIN.gets)           
