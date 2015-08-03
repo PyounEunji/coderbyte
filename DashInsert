@@ -1,0 +1,17 @@
+def DashInsert(num)
+  num = num.to_s.split("")
+  new_str = []
+  idx = 0
+  while idx < num.length - 1
+    new_str.push(num[idx])
+    if num[idx].to_i % 2 != 0 && num[idx+1].to_i % 2 != 0
+      new_str.push("-")
+    end
+    idx += 1
+  end
+  
+  new_str.push(num[-1])
+  return new_str.join("")
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+DashInsert(STDIN.gets)  
